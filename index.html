@@ -1,748 +1,204 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta http-equiv=Content-Type content="text/html; charset=windows-1256">
-    <meta name=Generator content="Microsoft Word 15 (filtered)">
-    <style>
-        < !--
+  <meta charset="UTF-8">
+  <title>MoneyGuru Supreme - Get Rich Fast!</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        /* Font Definitions */
-        @font-face {
-            font-family: Wingdings;
-            panose-1: 5 0 0 0 0 0 0 0 0 0;
-        }
+    body {
+      background: linear-gradient(to bottom right, #ffef00, #ff0033);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
 
-        @font-face {
-            font-family: "Cambria Math";
-            panose-1: 2 4 5 3 5 4 6 3 2 4;
-        }
+    .blink {
+      animation: blink 1s infinite alternate;
+    }
+    @keyframes blink {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
 
-        @font-face {
-            font-family: Calibri;
-            panose-1: 2 15 5 2 2 2 4 3 2 4;
-        }
+    .headline {
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 8px #000;
+      margin: 40px 0 20px;
+    }
 
-        /* Style Definitions */
-        p.MsoNormal,
-        li.MsoNormal,
-        div.MsoNormal {
-            margin-top: 0in;
-            margin-right: 0in;
-            margin-bottom: 8.0pt;
-            margin-left: 0in;
-            line-height: 107%;
-            font-size: 11.0pt;
-            font-family: "Calibri", sans-serif;
-        }
+    .subheadline {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px #000;
+    }
 
-        a:link,
-        span.MsoHyperlink {
-            color: #0563C1;
-            text-decoration: underline;
-        }
+    .content {
+      background: rgba(0, 0, 0, 0.6);
+      border: 5px double #fff;
+      padding: 30px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
 
-        a:visited,
-        span.MsoHyperlinkFollowed {
-            color: #954F72;
-            text-decoration: underline;
-        }
+    .package {
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+      width: 250px;
+      background-color: #2b2b2b;
+      border: 3px solid gold;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #000;
+      vertical-align: top;
+    }
 
-        p.MsoListParagraph,
-        li.MsoListParagraph,
-        div.MsoListParagraph {
-            margin-top: 0in;
-            margin-right: 0in;
-            margin-bottom: 8.0pt;
-            margin-left: .5in;
-            line-height: 107%;
-            font-size: 11.0pt;
-            font-family: "Calibri", sans-serif;
-        }
+    .package h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
 
-        p.MsoListParagraphCxSpFirst,
-        li.MsoListParagraphCxSpFirst,
-        div.MsoListParagraphCxSpFirst {
-            margin-top: 0in;
-            margin-right: 0in;
-            margin-bottom: 0in;
-            margin-left: .5in;
-            margin-bottom: .0001pt;
-            line-height: 107%;
-            font-size: 11.0pt;
-            font-family: "Calibri", sans-serif;
-        }
+    .package p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
 
-        p.MsoListParagraphCxSpMiddle,
-        li.MsoListParagraphCxSpMiddle,
-        div.MsoListParagraphCxSpMiddle {
-            margin-top: 0in;
-            margin-right: 0in;
-            margin-bottom: 0in;
-            margin-left: .5in;
-            margin-bottom: .0001pt;
-            line-height: 107%;
-            font-size: 11.0pt;
-            font-family: "Calibri", sans-serif;
-        }
+    .price {
+      font-size: 1.5rem;
+      color: #00ff00;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #000;
+    }
 
-        p.MsoListParagraphCxSpLast,
-        li.MsoListParagraphCxSpLast,
-        div.MsoListParagraphCxSpLast {
-            margin-top: 0in;
-            margin-right: 0in;
-            margin-bottom: 8.0pt;
-            margin-left: .5in;
-            line-height: 107%;
-            font-size: 11.0pt;
-            font-family: "Calibri", sans-serif;
-        }
+    .buy-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff0077;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-        .MsoChpDefault {
-            font-family: "Calibri", sans-serif;
-        }
+    .buy-btn:hover {
+      background-color: #ff5eaa;
+    }
 
-        .MsoPapDefault {
-            margin-bottom: 8.0pt;
-            line-height: 107%;
-        }
+    .testimonials {
+      margin-top: 40px;
+    }
 
-        @page WordSection1 {
-            size: 8.5in 11.0in;
-            margin: 1.0in 1.0in 1.0in 1.0in;
-        }
+    .testimonial {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      text-align: left;
+    }
 
-        div.WordSection1 {
-            page: WordSection1;
-        }
+    .testimonial h4 {
+      margin-bottom: 5px;
+      color: #00ffcc;
+    }
 
-        /* List Definitions */
-        ol {
-            margin-bottom: 0in;
-        }
-
-        ul {
-            margin-bottom: 0in;
-        }
-
-        -->
-    </style>
-
+    .disclaimer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #eee;
+    }
+  </style>
 </head>
-
-<body lang=EN-US link="#0563C1" vlink="#954F72" style="background:#f3f3f3">
-
-    <div class=WordSection1 style="width:800px; margin:20px auto 20px auto;border:1px solid #3A291F; text-align:left ">
-        <div style="display:block">
-            <div style="background:#ffffff">
-                <div style="margin-left:20px;margin-right:20px">
-                    <p class=MsoNormal>
-                        <b>
-                            <br />
-                            <span style='font-size:16.0pt;line-height:107%;
-font-family:"Times New Roman",serif'>Mohammad
-                                Hossein Nazemi</span>
-                        </b><b>
-                            <span style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>
-                                <br>
-                            </span>
-                        </b><span style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>
-                            Iran<b>
-                            </b>
-                        </span>
-                    </p>
-
-                    <p class=MsoNormal>
-                        <span style='font-family:"Times New Roman",serif'>
-                            Phone
-                            Number: +989351166373
-                        </span>
-                    </p>
-
-                    <p class=MsoNormal>
-                        <span style='font-family:"Times New Roman",serif'>E-Mail: </span><a href="mailto:nazemimohammadh@gmail.com"><span
-                                style='font-family:"Times New Roman",serif'>nazemimohammadh@gmail.com</span></a>
-                    </p>
-
-                    <div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-                        <p class=MsoNormal style='border:none;padding:0in'>
-                            <b>
-                                <span style='font-size:
-14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Education</span>
-                            </b>
-                        </p>
-
-                    </div>
-                    <p class=MsoNormal>
-                        <table width="100%">
-                            <tr>
-                                <td><b><i><span style='font-family:"Times New Roman",serif'>
-                                                Islamic
-                                                Azad University Tehran Central branch (IAUCTB) </span></i></b></td>
-                                <td><span style='font-family:"Times New Roman",serif'>Tehran,Iran</span>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <i>
-                            <span style='font-family:"Times New Roman",serif'>
-                                B.Sc.
-                                Computer Software Engineering
-                            </span>
-                        </i>
-                    </p>
-
-                    <p class=MsoListParagraph style='text-indent:-.25in'>
-                        <span style='font-family:
-"Times New Roman",serif'>
-                            -<span style='font:7.0pt "Times New Roman"'>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span>
-                        </span><span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                            GPA:
-                            16.47 (20)
-                        </span>
-                    </p>
-
-                    <br />
-                    <div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-                        <p class=MsoNormal style='border:none;padding:0in'>
-                            <b>
-                                <span style='font-size:
-14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Work
-                                    Experiences</span>
-                            </b>
-                        </p>
-
-                    </div>
-                    <br />
-
-                    <ul>
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Senior Software Developer in Vista Algorithm Company (from jun 2018)
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Worked on network layer of linux<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Machine learning Developer in EKN Start up
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpLast style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Designed and developed multiple
-                                    machine learning algorithm for a smart home system
-                                </span>
-                            </p>
-                        </li>
-                        <li>
-
-                            <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Software
-                                    Designer in Modiran 21 (2 Years)
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Designed and developed a
-                                    meeting &amp; scheduling managing system for 2 years<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Server
-                                    Side Developer in Behin Afzar Company (6 Months)
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Developed multiple enterprise web
-                                    based software with .Net technology<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-
-
-                    </ul>
-
-
-
-
-
-
-
-
-
-
-
-                    <br />
-                    <div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-                        <p class=MsoNormal style='border:none;padding:0in'>
-                            <b>
-                                <span style='font-size:
-14.0pt;line-height:107%;font-family:"Times New Roman",serif'>
-                                    Skills</span>
-                            </b>
-                        </p>
-
-                    </div>
-                    <br />
-
-
-
-                    <ul>
-                        <li>
-
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Having Experiences in Different Programing Languages and Frameworks</span>
-                            </p>
-
-                               <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - C#, ASP.NET, Python, C++, SQL, Java, Android, Go<br>
-                                    <br>
-                                </span>
-                            </p>
-
-                        </li>
-
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Image Processing </span>
-                            </p>
-
-                               <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Super resolutuon algorithm: worked with example based, classical and unified algorithms
-                                    <br>
-                                    <br>
-                                </span>
-                            </p>
-
-                        </li>
-
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Machine Learning</span>
-                            </p>
-
-                               <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Supervised: Linear Regression, Logistic Regression, Neural Networks
-
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Unsupervised: K-Means, PCA
-                                    <br>
-                                    <br>
-                                </span>
-                            </p>
-
-                        </li>
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Optimization Algorithm </span>
-                            </p>
-
-                               <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Genetic algorithm, Swarn Inteeligence(PSO and Ant Colony)
-                                    <br>
-                                    <br>
-                                </span>
-                            </p>
-
-                        </li>
-
-                    </ul>
-
-
-
-
-
-
-                    <br />
-                    <div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-                        <p class=MsoNormal style='border:none;padding:0in'>
-                            <b>
-                                <span style='font-size:
-14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Interested
-                                    fields</span>
-                            </b>
-                        </p>
-
-                    </div>
-                    <br />
-
-
-
-
-                    <ul>
-
-                     <li>
-
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Image Processing and Computer Vision</span>
-                            </p>
-                        </li>
-
-
-                        <li>
-
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Machine learning
-                                    algorithms</span>
-                            </p>
-                        </li>
-
-                        <li>
-
-                            <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Cognitive
-                                    science</span>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class=MsoListParagraphCxSpLast style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Video Game
-                                    Designing</span>
-                            </p>
-
-                        </li>
-
-
-
-                    </ul>
-
-
-
-
-
-                    <p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
-
-                    <div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-                        <p class=MsoNormal style='border:none;padding:0in'>
-                            <b>
-                                <span style='font-size:
-14.0pt;line-height:107%;font-family:"Times New Roman",serif'>
-                                    Voluntary
-                                    Experiences</span>
-                            </b>
-                        </p>
-
-                    </div>
-                    <br />
-
-
-
-
-                    <ul>
-                        <li>
-
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Co-Founder of
-                                    IAUCTB computer association</span>
-                            </p>
-                        </li>
-
-                        <li>
-
-                            <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Head of IAUCTB
-                                    computer association (1 year)</span>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Head of
-                                    professional activities IEEE IAUCTB student branch (1 year)</span>
-                            </p>
-
-                        </li>
-
-                        <li>
-                            <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Head of chapters
-                                    IEEE IAUCTB student branch (1 year)</span>
-                            </p>
-
-                        </li>
-
-                        <li>
-
-                            <p class=MsoListParagraphCxSpLast style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>Member of
-                                    translation team of Think Python Book (O'Reilly)</span>
-                            </p>
-                        </li>
-
-
-                    </ul>
-
-
-
-
-
-
-
-
-                    <br />
-                    <div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-                        <p class=MsoNormal style='border:none;padding:0in'>
-                            <b>
-                                <span style='font-size:
-14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Teaching
-                                    Experiences</span>
-                            </b>
-                        </p>
-
-                    </div>
-                    <br />
-
-
-
-
-
-                    <ul>
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Algorithms (TA) (2 semesters)
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -Islamic Azad University Central Tehran Branch<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Data structure (TA) (1 semester)
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -Islamic Azad University Central Tehran Branch<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Database (TA) (4 semester)
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -Islamic Azad University Central Tehran Branch<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Python programming language instructor
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -Tehran Institute of Technology<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Python programming language instructor
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -Jahad Daneshgahi Academic Institute of Tehran<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>ASP.Net
-                                    Instructor
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -Jahad Daneshgahi Academic Institute of Tehran<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>SQL Instructor
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -Jahad Daneshgahi Academic Institute of Tehran<br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-                    </ul>
-
-
-                    <br />
-                    <div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
-
-                        <p class=MsoNormal style='border:none;padding:0in'>
-                            <b>
-                                <span style='font-size:
-14.0pt;line-height:107%;font-family:"Times New Roman",serif'>
-                                    Researches and Projects
-                                </span>
-                            </b><span style='font-family:"Times New Roman",serif'>
-                            </span>
-                        </p>
-
-                    </div>
-                    <br />
-
-                    <ul>
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Genetic algorithm for a time table scheduling on a hard constraint environment
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - As my bachelor's project I implemented an algorithm for a consultant company's scheduling software based on "Genetic Algorithm with Search Bank Strategies for University Course Timetabling Problem" article  (under supervision of
-                                    prof. Jahanshahi)
-                                    <br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Implementation of "Super-Resolution from a Single Image" article with new searching algorithm
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -I implemented a new super resolution algorithm based on "Super-Resolution from a Single Image" article and improved the searching algorithm with EFANNA algorithm based on "EFANNA: An Extremely Fast Approximate Nearest Neighbor Search Algorithm Based on kNN Graph" article
-                                    <br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    Number Plate Recognition
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    -I implemented a software that used differnet filters and a classification algorithm that can detect a number plate
-                                    <br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-                      
-
-
-                        <li>
-                            <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>
-                                <span dir=LTR></span><span style='font-family:"Times New Roman",serif'>
-                                    News classifier
-                                </span>
-                            </p>
-                            <p class=MsoListParagraphCxSpMiddle style='margin-left:40px'>
-                                <span style='font-family:"Times New Roman",serif'>
-                                    - Implement and designed a supervised system which fetchs news from
-                                    a technology news site and classifies them based on words frequency appearance with Logistic Regression algorithm
-                                    <br>
-                                    <br>
-                                </span>
-                            </p>
-                        </li>
-
-
-
-
-                    <br />
-                    <p class=MsoListParagraphCxSpLast><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
-
-                    <p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
-
-                    <p class=MsoNormal>
-                        <b>
-                            <span style='font-size:14.0pt;line-height:107%;
-font-family:"Times New Roman",serif'>&nbsp;</span>
-                        </b>
-                    </p>
-                </div>
-            </div>
-        </div>
+<body>
+
+  <h1 class="headline blink">Be a Millionaire Overnight!</h1>
+  <h2 class="subheadline">Yes, Really. No, Seriously. Just Give Us Your Money! With Nazemi's guaranteed methods of success!</h2>
+
+  <div class="content">
+    <img src="fake-millionaire.jpg" alt="Happy Millionaire" width="300" style="border: 5px solid #fff; border-radius: 10px;">
+    
+    <p style="font-size:1.2rem; margin-top:20px;">
+      Have you ever dreamed of earning <strong>billions</strong> while you sleep?  
+      Well, you're in luck! At <em>Nazemi Supreme</em>, we've created a foolproof system 
+      that guarantees you'll be rolling in cash within <strong>minutes</strong>. 
+      Or hours, or maybe days. But definitely soonish!
+    </p>
+
+    <hr style="margin: 30px 0; border: 2px dashed #fff;">
+
+    <h2 style="margin-bottom:20px;">Our Exclusive Packages</h2>
+
+    <div class="package">
+      <h3>Bronze Dreamer Pack</h3>
+      <p>Just enough info to get your pinky toe in the door.</p>
+      <div class="price">Only $99!</div>
+      <a href="#" class="buy-btn">Buy Now</a>
     </div>
 
-</body>
+    <div class="package">
+      <h3>Silver Success Kit</h3>
+      <p>We promise a 200% increase in your hopes &amp; dreams!</p>
+      <div class="price">Only $499!</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+    </div>
 
+    <div class="package">
+      <h3>Gold Empire Builder</h3>
+      <p>Because nothing says guaranteed success like <strong>Gold</strong>!</p>
+      <div class="price">Only $999!</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="package">
+      <h3>Platinum Infinity Mastermind</h3>
+      <p>You’ll be unstoppable (in a hypothetical scenario).</p>
+      <div class="price">Only $9,999!</div>
+      <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+
+    <hr style="margin: 30px 0; border: 2px dashed #fff;">
+
+    <div class="testimonials">
+      <h2>Testimonials*</h2>
+      <div class="testimonial">
+        <h4>Abbas, Kiarostami</h4>
+        <p>
+          “I bought the Bronze Pack, and within 24 hours, I was already making 
+          imaginary profits! My mailman even said I looked wealthier.”
+        </p>
+      </div>
+      <div class="testimonial">
+        <h4>Jeff Bezos</h4>
+        <p>
+          “Before Nazemi Supreme, I had a normal job. Now, I tell people I'm ‘financially free’ 
+          while living in my parents’ basement. Thanks, guys!”
+        </p>
+      </div>
+      <div class="testimonial">
+        <h4>Anonymous Person We Definitely Didn't Make Up</h4>
+        <p>
+          “It works! The second I paid, the founder told me to read five self-help books, 
+          and now I'm ready to conquer the world. Or at least Twitter.”
+        </p>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      *Testimonials may or may not be 100% fabricated. 
+      Nazemi Supreme is absolutely not responsible for any results, 
+      side effects, or questionable life decisions made after purchasing.
+    </p>
+  </div>
+
+</body>
 </html>
