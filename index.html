@@ -1,215 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MoneyGuru Supreme - Get Rich Fast!</title>
-  <style>
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio in Progress - Mo Nazemi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-    body {
-      background: linear-gradient(to bottom right, #ffef00, #ff0033);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
+        body {
+            background: #0f172a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .blink {
-      animation: blink 1s infinite alternate;
-    }
-    @keyframes blink {
-      from { opacity: 1; }
-      to   { opacity: 0; }
-    }
+        .background-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.05),
+                rgba(255, 255, 255, 0.05) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            opacity: 0.15;
+        }
 
-    .headline {
-      font-size: 3rem;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 8px #000;
-      margin: 40px 0 20px;
-    }
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 800px;
+        }
 
-    .subheadline {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 2px #000;
-    }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+            color: #34d399;
+        }
 
-    .content {
-      background: rgba(0, 0, 0, 0.6);
-      border: 5px double #fff;
-      padding: 30px;
-      margin: 20px auto;
-      width: 80%;
-      max-width: 800px;
-      border-radius: 10px;
-    }
+        .construction-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
 
-    .package {
-      display: inline-block;
-      margin: 20px;
-      padding: 20px;
-      width: 250px;
-      background-color: #2b2b2b;
-      border: 3px solid gold;
-      border-radius: 15px;
-      box-shadow: 0 0 10px #000;
-      vertical-align: top;
-    }
+        .progress-bar {
+            width: 60%;
+            height: 8px;
+            background: #1e293b;
+            margin: 2rem auto;
+            border-radius: 4px;
+            overflow: hidden;
+        }
 
-    .package h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
+        .progress {
+            width: 65%;
+            height: 100%;
+            background: linear-gradient(90deg, #34d399, #3b82f6);
+            animation: progress-animation 3s ease-in-out infinite;
+        }
 
-    .package p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
+        p {
+            margin: 1rem 0;
+            color: #94a3b8;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .price {
-      font-size: 1.5rem;
-      color: #00ff00;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 2px #000;
-    }
+        .highlight {
+            color: #34d399;
+            font-weight: 500;
+        }
 
-    .buy-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ff0077;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
 
-    .buy-btn:hover {
-      background-color: #ff5eaa;
-    }
+        .social-links a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-    .testimonials {
-      margin-top: 40px;
-    }
+        .social-links a:hover {
+            color: #34d399;
+        }
 
-    .testimonial {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      margin: 20px auto;
-      max-width: 600px;
-      padding: 20px;
-      text-align: left;
-    }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
 
-    .testimonial h4 {
-      margin-bottom: 5px;
-      color: #00ffcc;
-    }
+        @keyframes progress-animation {
+            0% { width: 60%; }
+            50% { width: 75%; }
+            100% { width: 60%; }
+        }
 
-    .disclaimer {
-      margin-top: 40px;
-      font-size: 0.1rem;
-      color: #eee;
-    }
-  </style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .progress-bar { width: 80%; }
+            .construction-icon { font-size: 3rem; }
+        }
+    </style>
 </head>
 <body>
+    <div class="background-pattern"></div>
+    <div class="container">
+        <div class="construction-icon">🚧</div>
+        <h1>Crafting My Digital Portfolio</h1>
+        <p>Hi! I'm <span class="highlight">Mo Nazemi</span>, a passionate <span class="highlight">Computer Engineer</span> currently building an immersive showcase of my work.</p>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <p>Developing a curated collection of:<br>
+        <span class="highlight">Selected Projects</span> • <span class="highlight">Case Studies</span> • <span class="highlight">Professional Journey</span></p>
+        
+        <div class="social-links">
+            <!-- <a href="https://github.com/yourprofile" target="_blank">GitHub</a> -->
+            <a href="https://www.linkedin.com/in/mohammad-nazemi-b93bb485/" target="_blank">LinkedIn</a>
+            <a href="mailto:mo.nazemi.94@gmail.com">Email</a>
+            <!-- <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> -->
+        </div>
 
-  <h1 class="headline blink">Be a Millionaire Overnight!</h1>
-  <h2 class="subheadline">Yes, Really. No, Seriously. Just Give Us Your Money! With Nazemi's guaranteed methods of success!</h2>
-
-  <div class="content">
-    <img src="fake-millionaire.jpg" alt="Happy Millionaire" width="300" style="border: 5px solid #fff; border-radius: 10px;">
-    
-    <p style="font-size:1.2rem; margin-top:20px;">
-      Have you ever dreamed of earning <strong>billions</strong> while you sleep?  
-      Well, you're in luck! At <em>Nazemi Supreme</em>, we've created a foolproof system 
-      that guarantees you'll be rolling in cash within <strong>minutes</strong>. 
-      Or hours, or maybe days. But definitely soonish!
-    </p>
-
-    <hr style="margin: 30px 0; border: 2px dashed #fff;">
-
-    <h2 style="margin-bottom:20px;">Our Exclusive Packages</h2>
-
-    <div class="package">
-      <h3>Bronze Dreamer Pack</h3>
-      <p>Just enough info to get your pinky toe in the door.</p>
-      <div class="price">Only $99!</div>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-
-    <div class="package">
-      <h3>Silver Success Kit</h3>
-      <p>We promise a 200% increase in your hopes &amp; dreams!</p>
-      <div class="price">Only $499!</div>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-
-    <div class="package">
-      <h3>Gold Empire Builder</h3>
-      <p>Because nothing says guaranteed success like <strong>Gold</strong>!</p>
-      <div class="price">Only $999!</div>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-
-    <div class="package">
-      <h3>Platinum Infinity Mastermind</h3>
-      <p>You’ll be unstoppable (in a hypothetical scenario).</p>
-      <div class="price">Only $9,999!</div>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-
-    <hr style="margin: 30px 0; border: 2px dashed #fff;">
-
-    <div class="testimonials">
-      <h2>Testimonials*</h2>
-      <div class="testimonial">
-        <h4>Abbas, Kiarostami</h4>
-        <p>
-          “I bought the Bronze Pack, and within 24 hours, I was already making 
-          imaginary profits! My mailman even said I looked wealthier.”
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #64748b;">
+            Launching soon • Stay tuned
         </p>
-      </div>
-      <div class="testimonial">
-        <h4>Jeff Bezos</h4>
-        <p>
-          “Before Nazemi Supreme, I had a normal job. Now, I tell people I'm ‘financially free’ 
-          while living in my parents’ basement. Thanks, guys!”
-        </p>
-      </div>
-      <div class="testimonial">
-        <h4>Anonymous Person We Definitely Didn't Make Up</h4>
-        <p>
-          “It works! The second I paid, the founder told me to read five self-help books, 
-          and now I'm ready to conquer the world. Or at least Twitter.”
-        </p>
-      </div>
     </div>
-   <div class="testimonial">
-        <h4>Dr.Mohammadsaber gholaminajarkola</h4>
-        <p>
-          “I had, shall we say, ‘performance issues’ before discovering Nazemi Supreme. 
-        But after I purchased the Gold Empire Builder, not only did my bank account 
-        triple overnight, but now I’m apparently unstoppable in the bedroom, too. 
-        My psychologist is stunned — and so am I!”
-        </p>
-      </div>
-    <p class="disclaimer">
-      *Testimonials may or may not be 100% fabricated. 
-      Nazemi Supreme is absolutely not responsible for any results, 
-      side effects, or questionable life decisions made after purchasing.
-    </p>
-  </div>
-
-
-    </div>
-
 </body>
 </html>
